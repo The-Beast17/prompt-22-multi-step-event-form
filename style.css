@@ -1,0 +1,118 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    height : 100%;
+    width : 100%;
+}
+
+.page1{
+    height : 100%;
+    width : 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat";
+    overflow: hidden;
+    
+}
+.page1 > h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4vw;
+    -webkit-text-stroke: 2px rgb(18, 204, 225);
+    color : rgb(135, 4, 4);
+}
+
+.page1 .content {
+    width : 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap : 2vh; */
+    padding : 4vw;
+}
+.page1 .content .container {
+    width : 55vh;
+    height : 60vh;
+    border: 2px solid black;
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+
+.page1 .content .container .steps{
+    background-image: linear-gradient(to right ,white,blueviolet, blueviolet);
+    height : 7vh;
+    width : 100%;
+    clip-path : polygon(0% 0% , 27% 0% , 33% 50%, 27% 100% , 0% 100%);
+    display: flex;
+    align-items: center;
+}
+.page1 .content .container:nth-child(2) .steps{
+    clip-path : polygon(0% 0% , 60% 0% , 66% 50%, 60% 100% , 0% 100%);
+}
+.page1 .content .container:nth-child(3) .steps{
+    clip-path : polygon(0% 0% , 94% 0% , 100% 50%, 94% 100% , 0% 100%);
+}
+.page1 .content .container  p{
+   padding : 2vh 4vh;
+}
+
+.page1 .content .container form{
+    width : 100%;
+    height : 80%;
+    border-top : 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 3vh;
+    background-color: bisque;
+    padding : 2vh;
+}
+.page1 .content .container form input{
+    padding : 2vh 2vh;
+    width : 100%;
+    border : none;
+    border-bottom: 2px solid black;
+}
+.page1 .content .container form .btn{
+    width : 100%;
+    padding : 1vh 2vh;
+    display: flex;
+    justify-content: space-between;
+}
+.page1 .content .container:first-child form .btn{
+    justify-content: end;
+}
+.page1 .content .container form .btn button{
+    width : 15vh;
+    padding : 1.4vh 4vh;
+    font-size: 2vh;
+    font-weight: 600;
+    background-color: rgb(161, 108, 211);
+    border-radius: 25px;
+    border : none;
+}
+
+
+/*************meadia******/
+@media (max-width : 600px){
+  .page1 {
+    height : max-content
+  }
+  .page1 >h1{
+   font-size: 10vw;
+   text-align: center;
+   padding: 4vw 0;
+  }
+  .page1 .content{
+     flex-direction: column;
+     gap : 4vh;
+  }
+  .page1 .content .container{
+    width : 100%;
+  }
+}
